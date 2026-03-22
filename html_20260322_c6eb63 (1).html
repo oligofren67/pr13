@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+    <title>Мой простой сайт</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', sans-serif;
+            background: #f8fafc;
+            color: #0f172a;
+            line-height: 1.5;
+            padding: 2rem 1rem;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            background: white;
+            border-radius: 1.5rem;
+            box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.05), 0 8px 10px -6px rgba(0, 0, 0, 0.02);
+            overflow: hidden;
+            transition: all 0.2s ease;
+        }
+
+        header {
+            background: linear-gradient(135deg, #1e3a8a, #3b82f6);
+            padding: 2rem 2rem 1.8rem;
+            color: white;
+            text-align: center;
+        }
+
+        header h1 {
+            font-size: 2rem;
+            font-weight: 700;
+            letter-spacing: -0.01em;
+            margin-bottom: 0.5rem;
+        }
+
+        header p {
+            font-size: 1rem;
+            opacity: 0.9;
+            max-width: 500px;
+            margin: 0 auto;
+        }
+
+        .content {
+            padding: 2rem;
+        }
+
+        .card {
+            background: #ffffff;
+            border: 1px solid #e2e8f0;
+            border-radius: 1rem;
+            padding: 1.5rem;
+            margin-bottom: 1.8rem;
+            transition: box-shadow 0.2s;
+        }
+
+        .card:hover {
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.05);
+        }
+
+        .card h2 {
+            font-size: 1.5rem;
+            font-weight: 600;
+            margin-bottom: 1rem;
+            color: #0f172a;
+            border-left: 4px solid #3b82f6;
+            padding-left: 0.75rem;
+        }
+
+        .card p {
+            color: #334155;
+            margin-bottom: 0.75rem;
+        }
+
+        .highlight {
+            background: #f1f5f9;
+            border-left: 4px solid #3b82f6;
+            padding: 0.75rem 1rem;
+            border-radius: 0.75rem;
+            font-size: 0.9rem;
+            color: #1e293b;
+            margin: 1rem 0 0.5rem;
+            font-family: 'SF Mono', 'Fira Code', monospace;
+            overflow-x: auto;
+            white-space: pre-wrap;
+            word-break: break-word;
+        }
+
+        .info-box {
+            background: #eef2ff;
+            border-radius: 1rem;
+            padding: 1.25rem;
+            margin-top: 1.5rem;
+            border: 1px solid #cbd5e1;
+        }
+
+        .info-box p {
+            margin-bottom: 0.5rem;
+        }
+
+        .info-box code {
+            background: #1e293b;
+            color: #e2e8f0;
+            padding: 0.2rem 0.4rem;
+            border-radius: 0.5rem;
+            font-size: 0.85rem;
+            font-family: monospace;
+        }
+
+        footer {
+            background: #f1f5f9;
+            text-align: center;
+            padding: 1.2rem;
+            font-size: 0.85rem;
+            color: #475569;
+            border-top: 1px solid #e2e8f0;
+        }
+
+        .btn-demo {
+            display: inline-block;
+            background: #3b82f6;
+            color: white;
+            padding: 0.5rem 1.2rem;
+            border-radius: 2rem;
+            font-weight: 500;
+            text-decoration: none;
+            font-size: 0.85rem;
+            margin-top: 0.75rem;
+            transition: background 0.2s;
+        }
+
+        .btn-demo:hover {
+            background: #2563eb;
+        }
+
+        @media (max-width: 640px) {
+            body {
+                padding: 1rem;
+            }
+            .content {
+                padding: 1.5rem;
+            }
+            header h1 {
+                font-size: 1.6rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>✨ Простая страница</h1>
+            <p>Чистый, лёгкий шаблон для ваших целей</p>
+        </header>
+
+        <div class="content">
+            <div class="card">
+                <h2>Добро пожаловать</h2>
+                <p>Этот сайт создан как базовая заготовка. Вы можете использовать его для личного блога, визитки, тестирования или любого другого проекта. В код уже установлен счётчик <strong>Яндекс.Метрики</strong> (ID: 108187253).</p>
+                <p>Текст легко редактируется — добавляйте свои абзацы, изображения, ссылки или меняйте стили под свои предпочтения.</p>
+            </div>
+
+            <div class="card">
+                <h2>О возможностях</h2>
+                <p>Сайт адаптирован для мобильных устройств, имеет современный внешний вид и минималистичную структуру. Вы можете встроить форму обратной связи, галерею или любой другой контент.</p>
+                <p>Основная цель — дать чистый HTML/CSS каркас, куда вы сразу можете добавить <strong>Яндекс.Метрику</strong> и начать отслеживать посещаемость.</p>
+                <a href="#" class="btn-demo" id="demoClick">👉 Пример кнопки (клик)</a>
+                <div class="highlight" id="clickMessage" style="display: none; margin-top: 12px;">
+                    ✨ Кнопка сработала! Если счётчик активен, это действие может быть учтено в статистике (цели/события).
+                </div>
+            </div>
+
+            <div class="card">
+                <h2>Как добавить Яндекс.Счётчик?</h2>
+                <p>1. Получите код счётчика в <a href="https://metrika.yandex.ru" target="_blank" rel="noopener noreferrer">Яндекс.Метрике</a> (зарегистрируйте сайт, возьмите информер или код тега).</p>
+                <p>2. Откройте этот HTML-файл в любом редакторе, найдите раздел с комментариями <code>&lt;!-- МЕСТО ДЛЯ КОДА ЯНДЕКС.МЕТРИКИ --&gt;</code> внутри тега <code>&lt;head&gt;</code>.</p>
+                <p>3. Раскомментируйте пример или вставьте свой код вместо него. Убедитесь, что скрипт загружается корректно.</p>
+                <div class="info-box">
+                    <p>📊 <strong>Совет:</strong> Обычно код счётчика размещают в конце страницы перед <code>&lt;/body&gt;</code>, чтобы не блокировать отрисовку контента. При желании можете перенести весь блок сразу перед закрывающим тегом <code>&lt;/body&gt;</code> — ниже вы найдёте закомментированную альтернативную зону.</p>
+                </div>
+            </div>
+        </div>
+
+        <footer>
+            <p>Простой сайт — пример интеграции Яндекс.Метрики | Данные не собираются без активного счётчика</p>
+        </footer>
+    </div>
+
+    <!-- Небольшая интерактивность для демонстрации (не влияет на счётчик) -->
+    <script>
+        const demoBtn = document.getElementById('demoClick');
+        const msgDiv = document.getElementById('clickMessage');
+        if (demoBtn) {
+            demoBtn.addEventListener('click', (e) => {
+                e.preventDefault();
+                if (msgDiv) {
+                    msgDiv.style.display = 'block';
+                    setTimeout(() => {
+                        msgDiv.style.opacity = '0';
+                        setTimeout(() => {
+                            msgDiv.style.display = 'none';
+                            msgDiv.style.opacity = '';
+                        }, 300);
+                    }, 2000);
+                }
+                // Можно добавить кастомный вызов цели Метрики, если счётчик активен:
+                // if (typeof ym === 'function') { ym(108187253, 'reachGoal', 'demo_click'); }
+            });
+        }
+        git init
+git add index.html
+git commit -m "First commit"
+git branch -M main
+git remote add origin https://github.com/oligofren67/pr13
+git push -u origin main
+    </script>
+
+    <!-- ========== КОД ЯНДЕКС.МЕТРИКИ (установлен) ========== -->
+    <!-- Yandex.Metrika counter -->
+    <script type="text/javascript">
+        (function(m,e,t,r,i,k,a){
+            m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};
+            m[i].l=1*new Date();
+            for (var j = 0; j < document.scripts.length; j++) {if (document.scripts[j].src === r) { return; }}
+            k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)
+        })(window, document,'script','https://mc.yandex.ru/metrika/tag.js?id=108187253', 'ym');
+
+        ym(108187253, 'init', {ssr:true, webvisor:true, clickmap:true, ecommerce:"dataLayer", referrer: document.referrer, url: location.href, accurateTrackBounce:true, trackLinks:true});
+    </script>
+    <noscript><div><img src="https://mc.yandex.ru/watch/108187253" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
+    <!-- /Yandex.Metrika counter -->
+    <!-- =================================================== -->
+</body>
+</html>
