@@ -1,6 +1,15 @@
 <!DOCTYPE html>
 <html lang="ru">
 <head>
+    <!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-RNST7LEM2E"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-RNST7LEM2E');
+</script>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
     <title>Мой простой сайт</title>
@@ -165,7 +174,7 @@
         <div class="content">
             <div class="card">
                 <h2>Добро пожаловать</h2>
-                <p>Этот сайт создан как базовая заготовка. Вы можете использовать его для личного блога, визитки, тестирования или любого другого проекта. В код уже установлен счётчик <strong>Яндекс.Метрики</strong> (ID: 108187253).</p>
+                <p>Этот сайт создан как базовая заготовка. Вы можете использовать его для личного блога, визитки, тестирования или любого другого проекта. В код уже установлен счётчик <strong>Google Аналитики</strong> .</p>
                 <p>Текст легко редактируется — добавляйте свои абзацы, изображения, ссылки или меняйте стили под свои предпочтения.</p>
             </div>
 
@@ -194,35 +203,5 @@
             <p>Простой сайт — пример интеграции Яндекс.Метрики | Данные не собираются без активного счётчика</p>
         </footer>
     </div>
-
-    <!-- Небольшая интерактивность для демонстрации (не влияет на счётчик) -->
-    <script>
-        const demoBtn = document.getElementById('demoClick');
-        const msgDiv = document.getElementById('clickMessage');
-        if (demoBtn) {
-            demoBtn.addEventListener('click', (e) => {
-                e.preventDefault();
-                if (msgDiv) {
-                    msgDiv.style.display = 'block';
-                    setTimeout(() => {
-                        msgDiv.style.opacity = '0';
-                        setTimeout(() => {
-                            msgDiv.style.display = 'none';
-                            msgDiv.style.opacity = '';
-                        }, 300);
-                    }, 2000);
-                }
-                // Можно добавить кастомный вызов цели Метрики, если счётчик активен:
-                // if (typeof ym === 'function') { ym(108187253, 'reachGoal', 'demo_click'); }
-            });
-        }
-        git init
-git add index.html
-git commit -m "First commit"
-git branch -M main
-git remote add origin https://github.com/oligofren67/pr13.git
-git push -u origin main
-        
-    </script>
 </body>
 </html>
